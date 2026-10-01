@@ -30,8 +30,9 @@ export function Footer() {
         ))}
       </ul>
 
+      {/* Resolved at render rather than hardcoded, so the year never goes stale. */}
       <p className="mt-14 font-mono text-xs text-faint">
-        Built with React, TypeScript, Vite and Tailwind. No framework beyond what the page needed.
+        © {new Date().getFullYear()} {profile.name}. All rights reserved.
       </p>
     </footer>
   )
