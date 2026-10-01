@@ -23,31 +23,22 @@ export function Nav() {
       <nav
         aria-label="Primary"
         className={`mx-auto flex max-w-5xl items-center gap-6 px-6 transition-[height] duration-300 ease-out ${
-          scrolled ? "h-16" : "h-32 sm:h-40"
+          scrolled ? "h-16" : "h-36 sm:h-50"
         }`}
       >
-        <a
-          href="#top"
-          className={`flex items-center font-mono font-medium tracking-tight transition-[gap] duration-300 ${
-            scrolled ? "gap-2.5 text-sm" : "gap-4 text-sm sm:text-base"
-          }`}
-        >
-          {/* Decorative: the link already carries the name as text, so a screen
-              reader would otherwise announce it twice. */}
+        <a href="#top" className="flex items-center">
+          {/* The portrait is now the only thing in this link, so its alt text is
+              the link's accessible name — it cannot be decorative any more. */}
           <img
             src="./avatar.jpg"
-            alt=""
-            width={132}
-            height={132}
+            alt="Opakrwoth Byron Peter"
+            width={180}
+            height={180}
             decoding="async"
             className={`rounded-full object-cover ring-1 ring-line transition-[width,height] duration-300 ease-out ${
-              scrolled ? "size-11" : "size-24 sm:size-33"
+              scrolled ? "size-11" : "size-28 sm:size-45"
             }`}
           />
-          <span>
-            <span className="text-accent">~/</span>
-            <span className="text-ink">byron</span>
-          </span>
         </a>
 
         <ul className="ml-auto hidden items-center gap-7 sm:flex">

@@ -2,7 +2,7 @@ import { profile, stats } from "../data/content"
 
 export function Hero() {
   return (
-    <section id="top" aria-label="Introduction" className="relative pt-40 pb-16 sm:pt-52 sm:pb-24">
+    <section id="top" aria-label="Introduction" className="relative pt-44 pb-16 sm:pt-60 sm:pb-24">
       {/* Decorative wash behind the heading; never announced. */}
       <div
         aria-hidden="true"
