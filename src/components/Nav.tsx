@@ -19,9 +19,21 @@ export function Nav() {
       }`}
     >
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-5xl items-center gap-6 px-6">
-        <a href="#top" className="font-mono text-sm font-medium tracking-tight">
-          <span className="text-accent">~/</span>
-          <span className="text-ink">byron</span>
+        <a href="#top" className="flex items-center gap-2.5 font-mono text-sm font-medium tracking-tight">
+          {/* Decorative: the link already carries the name as text, so a screen
+              reader would otherwise announce it twice. */}
+          <img
+            src="./avatar.jpg"
+            alt=""
+            width={32}
+            height={32}
+            decoding="async"
+            className="size-8 rounded-full object-cover ring-1 ring-line"
+          />
+          <span>
+            <span className="text-accent">~/</span>
+            <span className="text-ink">byron</span>
+          </span>
         </a>
 
         <ul className="ml-auto hidden items-center gap-7 sm:flex">
