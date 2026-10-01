@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* Semantic tokens. Everything in the UI references these, never a raw hex,
+   so a theme is one block of overrides rather than a sweep through components. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: #0b0e14;
+  --surface: #11151f;
+  --raised: #161b27;
+  --line: #232a3a;
+  --ink: #e6e9f0;
+  --muted: #9aa4b8;
+  --faint: #7c8699;
+  --accent: #5eead4;
+  --accent-soft: rgb(94 234 212 / 0.12);
+  --glow: rgb(94 234 212 / 0.07);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #fbfbfd;
+  --surface: #ffffff;
+  --raised: #f4f5f8;
+  --line: #e3e6ed;
+  --ink: #11151f;
+  --muted: #515a6e;
+  --faint: #687185;
+  --accent: #0d7d6e;
+  --accent-soft: rgb(13 125 110 / 0.09);
+  --glow: rgb(13 125 110 / 0.05);
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* One focus treatment for every interactive element, visible in both themes. */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
