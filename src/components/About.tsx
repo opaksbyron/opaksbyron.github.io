@@ -13,9 +13,9 @@ export function About() {
           </p>
           <p className="leading-relaxed text-muted">
             That is the thread through everything here: finding the gap between what a product
-            claims and what it does — a language cookie honoured by one app out of nine, a router
-            that scored every request and then discarded the score — and closing it in a way the
-            maintainers can review in one sitting.
+            claims and what it does, then closing it in a way the maintainers can review in one
+            sitting. A language cookie honoured by one app out of nine. A router that scored every
+            request and then threw the score away.
           </p>
           <p className="leading-relaxed text-muted">
             I am looking for a full-time frontend or full-stack role.

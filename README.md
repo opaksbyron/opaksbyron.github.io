@@ -1,4 +1,4 @@
-# Personal site — Opakrwoth Byron Peter
+# Personal site: Opakrwoth Byron Peter
 
 Portfolio for a frontend developer working in React and TypeScript.
 Built with Vite, React 19, TypeScript and Tailwind CSS v4.

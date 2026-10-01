@@ -25,7 +25,7 @@ export function Hero() {
       </h1>
 
       <p className="mt-4 text-xl text-muted sm:text-2xl">
-        {profile.role} <span className="text-faint">—</span>{" "}
+        {profile.role} <span className="text-faint">·</span>{" "}
         <span className="text-ink">{profile.focus}</span>
       </p>
 

@@ -16,7 +16,7 @@ export function useTheme() {
     try {
       localStorage.setItem("theme", theme)
     } catch {
-      // Private browsing or blocked storage — the theme still applies for this visit.
+      // Private browsing or blocked storage; the theme still applies for this visit.
     }
   }, [theme])
 

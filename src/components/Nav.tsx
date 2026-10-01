@@ -27,8 +27,8 @@ export function Nav() {
         }`}
       >
         <a href="#top" className="flex items-center">
-          {/* The portrait is now the only thing in this link, so its alt text is
-              the link's accessible name — it cannot be decorative any more. */}
+          {/* The portrait is now the only thing in this link, so its alt text
+              becomes the link's accessible name and cannot be decorative. */}
           <img
             src="./avatar.jpg"
             alt="Opakrwoth Byron Peter"

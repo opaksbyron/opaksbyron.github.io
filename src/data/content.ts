@@ -26,7 +26,7 @@ export const profile = {
   github: "https://github.com/opaksbyron",
   linkedin: "https://www.linkedin.com/in/opakrwoth-byron-peter-45649a331",
   intro:
-    "I learn by shipping real code. Seventeen pull requests across three production open-source codebases I did not write — message rendering, notification pipelines, internationalisation and UI state — each to its own conventions and test requirements.",
+    "I learn by shipping real code. Seventeen pull requests across three production open-source codebases I did not write, covering message rendering, notification pipelines, internationalisation and UI state, each to its own conventions and test requirements.",
 }
 
 export const stats = [
@@ -44,7 +44,7 @@ export const contributions: Contribution[] = [
     href: "https://github.com/iblai",
     items: [
       "Identified that the cross-app language cookie was honoured by only one of nine front-end applications, and filed the finding against their Agentic LMS.",
-      "Built the internationalisation layer for that LMS — next-intl, English and French catalogues, a converted navigation shell, and <html lang> driven by the resolved locale (WCAG 3.1.1) — with the full suite green at 3,255 tests.",
+      "Built the internationalisation layer for that LMS with next-intl, English and French catalogues, a converted navigation shell, and <html lang> driven by the resolved locale (WCAG 3.1.1). The full suite stayed green at 3,255 tests.",
       "Made the app scaffold bilingual so every newly generated project inherits i18n instead of the gap, and fixed the scaffold failing typecheck immediately after their own documented install command.",
       "Contributed an independent reproduction to a live platform bug, disproving the leading hypothesis by testing it against a second organisation.",
     ],
@@ -56,7 +56,7 @@ export const contributions: Contribution[] = [
     role: "Contributor",
     href: "https://github.com/mattermost/mattermost",
     items: [
-      "Added HCL/Terraform syntax highlighting to the message code-block renderer — vendored grammar plus loader, with tests.",
+      "Added HCL/Terraform syntax highlighting to the message code-block renderer: vendored grammar plus loader, with tests.",
       "Built a “show online only” filter for the Channel Members panel, and auto-continuation of markdown lists on Shift+Enter.",
       "Reworked the send-DM flow from the user popover, and fixed @mention notifications on edited posts.",
       "Fixed message-rendering bugs across emoticons, hashtags and KaTeX chemistry macros.",
@@ -82,9 +82,9 @@ export const projects: Project[] = [
     href: "https://github.com/opaksbyron/router-insight",
     stack: ["Next.js", "React 19", "TypeScript", "Tailwind", "Radix"],
     body: [
-      "ibl.ai’s model router reported what you spent. It could not answer the question underneath that number — was this request routed correctly?",
+      "ibl.ai’s model router reported what you spent. It could not answer the question underneath that number: was this request routed correctly?",
       "The router already scored every request across fourteen dimensions, then wrote the result to stdout and dropped it. Router Insight surfaces that judgement and narrows it to the two cases worth a human look: decisions that landed within 0.08 of a tier boundary, and those the router itself flagged as ambiguous.",
-      "Getting there meant patching the router to expose per-request decisions — 77 lines, zero new dependencies, loopback-only CORS, and prompt text excluded unless explicitly opted into.",
+      "Getting there meant patching the router to expose per-request decisions: 77 lines, zero new dependencies, loopback-only CORS, and prompt text excluded unless explicitly opted into.",
     ],
   },
 ]
@@ -110,7 +110,7 @@ export const skills: { group: string; items: string[] }[] = [
 
 export const education = {
   degree: "BSc Computer Science",
-  status: "In progress — Year 3",
+  status: "In progress, Year 3",
   school: "ISBAT University",
   place: "Kampala, Uganda",
 }
