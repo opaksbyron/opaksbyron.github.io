@@ -6,7 +6,9 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
+    // Condense once the hero's opening line has cleared, so the change reads as
+    // deliberate rather than twitching on the first pixel of scroll.
+    const onScroll = () => setScrolled(window.scrollY > 80)
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
@@ -18,17 +20,29 @@ export function Nav() {
         scrolled ? "border-b border-line bg-bg/80 backdrop-blur-md" : "border-b border-transparent"
       }`}
     >
-      <nav aria-label="Primary" className="mx-auto flex h-16 max-w-5xl items-center gap-6 px-6">
-        <a href="#top" className="flex items-center gap-2.5 font-mono text-sm font-medium tracking-tight">
+      <nav
+        aria-label="Primary"
+        className={`mx-auto flex max-w-5xl items-center gap-6 px-6 transition-[height] duration-300 ease-out ${
+          scrolled ? "h-16" : "h-32 sm:h-40"
+        }`}
+      >
+        <a
+          href="#top"
+          className={`flex items-center font-mono font-medium tracking-tight transition-[gap] duration-300 ${
+            scrolled ? "gap-2.5 text-sm" : "gap-4 text-sm sm:text-base"
+          }`}
+        >
           {/* Decorative: the link already carries the name as text, so a screen
               reader would otherwise announce it twice. */}
           <img
             src="./avatar.jpg"
             alt=""
-            width={44}
-            height={44}
+            width={132}
+            height={132}
             decoding="async"
-            className="size-11 rounded-full object-cover ring-1 ring-line"
+            className={`rounded-full object-cover ring-1 ring-line transition-[width,height] duration-300 ease-out ${
+              scrolled ? "size-11" : "size-24 sm:size-33"
+            }`}
           />
           <span>
             <span className="text-accent">~/</span>
