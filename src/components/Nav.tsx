@@ -25,10 +25,10 @@ export function Nav() {
           <img
             src="./avatar.jpg"
             alt=""
-            width={32}
-            height={32}
+            width={44}
+            height={44}
             decoding="async"
-            className="size-8 rounded-full object-cover ring-1 ring-line"
+            className="size-11 rounded-full object-cover ring-1 ring-line"
           />
           <span>
             <span className="text-accent">~/</span>
