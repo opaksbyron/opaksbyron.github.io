@@ -13,6 +13,7 @@ export type Project = {
   name: string
   tagline: string
   href: string
+  live?: string
   stack: string[]
   body: string[]
 }
@@ -76,6 +77,19 @@ export const contributions: Contribution[] = [
 ]
 
 export const projects: Project[] = [
+  {
+    name: "Uganda Web Performance Index",
+    tagline: "What the country's public web costs to load, measured and published",
+    href: "https://github.com/opaksbyron/uganda-web-performance",
+    live: "https://opaksbyron.github.io/uganda-web-performance",
+    stack: ["React", "TypeScript", "Vite", "Tailwind", "Lighthouse", "Node"],
+    body: [
+      "Core Web Vitals set one bar for the whole web, but almost all published performance data is gathered on fast networks and recent phones. I measured a sample that is rarely measured: 35 Ugandan government, banking and university sites, from Kampala, on a throttled mobile profile, with five well-optimised international sites as controls.",
+      "Not one Ugandan site in the sample reaches the 2.5 second target. The median is 19.2 seconds against 3.6 for the controls. GOV.UK serves its homepage in 0.19 MB; the heaviest site measured ships 61 MB, which is 323 times the bytes.",
+      "Three sites could not be measured at all because the browser refused to load them, including a licensed bank serving an expired TLS certificate. Those are reported exactly as observed, with the error strings and no inference about cause.",
+      "Every run is published: the site list, the measurement script, 96 raw Lighthouse results, and the dashboard that reads them. The sweep flushes after each site and resumes where it stopped, because the first attempt died partway through and took its results with it.",
+    ],
+  },
   {
     name: "Router Insight",
     tagline: "Routing observability for an open-source model router",

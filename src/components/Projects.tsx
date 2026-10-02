@@ -3,7 +3,7 @@ import { Section } from "./Section"
 
 export function Projects() {
   return (
-    <Section id="projects" index="02" title="Projects">
+    <Section id="projects" index="02" title="Selected projects">
       <div className="space-y-6">
         {projects.map((p) => (
           <article
@@ -12,14 +12,26 @@ export function Projects() {
           >
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
               <h3 className="text-xl font-semibold tracking-tight">{p.name}</h3>
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="font-mono text-sm text-accent transition hover:underline"
-              >
-                View source ↗
-              </a>
+              <span className="flex items-center gap-4">
+                {p.live ? (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-mono text-sm text-accent transition hover:underline"
+                  >
+                    View live ↗
+                  </a>
+                ) : null}
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="font-mono text-sm text-muted transition hover:text-accent hover:underline"
+                >
+                  Source ↗
+                </a>
+              </span>
             </div>
 
             <p className="mt-1 text-muted">{p.tagline}</p>
